@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-class User{
+export class User{
     name: string;
     location:{
         lat: number;
@@ -11,5 +11,8 @@ class User{
             lat:faker.location.latitude(),
             lng: faker.location.longitude()
         }
+    }
+    markerContent():string{
+        return `User Name : ${this.name}`
     }
 }
